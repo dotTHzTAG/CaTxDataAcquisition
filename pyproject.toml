@@ -1,0 +1,18 @@
+[project]
+name = "DataAcquisition"
+version = "0.1.1"
+description = "PyQt6 THz acquisition and dotTHz project management application."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "PyQt6==6.9.1",
+    "PyQt6-Qt6==6.9.2",
+    "numpy>=1.23",
+    "websockets>=10",
+    "nest-asyncio>=1.5",
+    "h5py>=3.8",
+    "matplotlib>=3.8",
+]
+
+[project.scripts]
+data-acquisition = "main:main"

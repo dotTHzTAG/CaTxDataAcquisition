@@ -1,0 +1,62 @@
+dotTHz Data Acquisition Installation Guide
+=======================
+
+Requirements
+------------
+- Windows with Python 3.9 or newer for source execution
+- Menlo Systems ScanControl for the supplied live acquisition backend
+- Writable application and project directories
+
+This application is part of dotTHz and a starting point for customisation to
+other commercial and home-built THz systems. Other systems require code changes;
+a spectrometer profile is metadata, not a driver. Data Manager can browse
+compatible projects without a connected instrument. Other OS targets need validation.
+
+Installation
+------------
+1. Open PowerShell in this application's source directory.
+2. Create an environment and install dependencies:
+
+   python -m venv .venv
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+
+3. Start the application:
+
+   .\.venv\Scripts\python.exe main.py
+
+Keep the full source directory, including ui, resources, version.json and the
+profile database. Profiles and data_acquisition.log are stored beside the app.
+
+Portable Windows Release
+------------------------
+Extract the whole DataAcquisition.zip archive into a writable directory and run
+DataAcquisition/DataAcquisition.exe. Keep its supporting files together.
+Python need not be installed for the bundled application.
+
+To build from source:
+
+   .\.venv\Scripts\python.exe -m pip install "pyinstaller>=6"
+   .\.venv\Scripts\python.exe build.py
+
+Output: release/DataAcquisition.zip. The script clears build/, removes an old
+release/DataAcquisition/ directory, and replaces the previous archive.
+
+ScanControl
+-----------
+Start Menlo Systems ScanControl and enable its remote interface (default
+localhost:8002). Leave ScanControl Idle before acquisition. There is no endpoint
+editor in the GUI. Developers can pass host and port to MenloScanControlClient
+when constructing AcquisitionService in catx/core/application.py.
+
+Release Information
+-------------------
+Version, release date, and build information are stored in version.json and
+displayed in the application's About dialogs.
+
+Next Steps
+----------
+README.md is the documentation entry point.
+docs/USER_MANUAL.md covers operation and troubleshooting.
+docs/CUSTOMISATION.md and AGENTS.md explain adaptation and AI coding direction.
+docs/DATA_FORMAT.md describes the stored data and units.
+LICENSE contains the license text. See pyproject.toml for package metadata.

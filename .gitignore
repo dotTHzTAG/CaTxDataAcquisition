@@ -1,0 +1,21 @@
+# Generated application bundles and build output
+/build/
+/dist/
+/release/
+*.egg-info/
+
+# Python environments and caches
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local logs and experimental project files
+*.log
+*.thz
+
+# Local editor settings
+/.vscode/
