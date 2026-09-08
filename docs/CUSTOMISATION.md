@@ -8,6 +8,8 @@ Today, only Menlo ScanControl is implemented. There is no backend registry, gene
 
 ## Code map
 
+The manual's [visual window guide](USER_MANUAL.md#visual-guide-to-the-windows) and [worked example](USER_MANUAL.md#worked-acquisition-example) connect the existing controls to saved measurement views. Use them to identify UI labels and instructions affected by an adaptation. Keep the referenced `Images/` screenshots alongside the guides in releases.
+
 | File | Responsibility and adaptation point |
 | --- | --- |
 | `catx/core/application.py` | Constructs one service shared by the windows; select/inject a backend here. |

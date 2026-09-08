@@ -56,7 +56,10 @@ displayed in the application's About dialogs.
 Next Steps
 ----------
 README.md is the documentation entry point.
-docs/USER_MANUAL.md covers operation and troubleshooting.
+docs/USER_MANUAL.md includes a screenshot tour, a worked acquisition example,
+and operation and troubleshooting instructions. Open it in a Markdown viewer
+or on GitHub to display images. Keep Images/ beside docs/ and README.md so
+relative screenshot links work in source checkouts and portable releases.
 docs/CUSTOMISATION.md and AGENTS.md explain adaptation and AI coding direction.
 docs/DATA_FORMAT.md describes the stored data and units.
 LICENSE contains the license text. See pyproject.toml for package metadata.

@@ -67,6 +67,7 @@ def run_pyinstaller() -> Path:
         if source.exists():
             shutil.copy2(source, application_dir / document)
     shutil.copytree(ROOT / "docs", application_dir / "docs", dirs_exist_ok=True)
+    shutil.copytree(ROOT / "Images", application_dir / "Images", dirs_exist_ok=True)
     return application_dir
 
 

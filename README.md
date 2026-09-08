@@ -7,12 +7,16 @@ Data Acquisition is part of the dotTHz project: a Python/PyQt6 desktop tool for 
 ## Documentation
 
 - [Installation](Installation_guide.txt): source setup and portable Windows releases.
-- [User manual](docs/USER_MANUAL.md): projects, profiles, calibration, acquisition, and data management.
+- [Illustrated user manual](docs/USER_MANUAL.md): window tour, worked acquisition example, profiles, calibration, and data management.
 - [Customisation guide](docs/CUSTOMISATION.md): modification direction, code map, backend requirements, and an AI handoff template.
 - [Stored data layout](docs/DATA_FORMAT.md): current HDF5 layout and plotting assumptions.
 - [AI contributor instructions](AGENTS.md): repository guidance for coding assistants.
 
 ## Features
+
+[![Data Manager displaying sample, reference, and baseline waveforms](Images/data_manager_window02.png)](docs/USER_MANUAL.md#data-manager-datasets)
+
+*Inspect saved measurements in Data Manager. Start with the [visual window guide](docs/USER_MANUAL.md#visual-guide-to-the-windows), or follow the [worked acquisition example](docs/USER_MANUAL.md#worked-acquisition-example).*
 
 - Menlo ScanControl connection and acquisition
 - Baseline, reference, and sample waveform capture
@@ -54,6 +58,7 @@ For the supplied backend, Menlo ScanControl must be running with its remote inte
 - `catx/`: models, repositories, services, and ScanControl integration
 - `ui/`: PyQt6 controllers and Designer `.ui` files
 - `resources/`: application icons
+- `docs/` and `Images/`: guides and screenshots; keep them together for the illustrated manual.
 - Projects are saved wherever the user chooses; profiles and the application log reside in the application directory, which must be writable.
 
 Runtime release metadata is stored in `version.json`; Python package metadata is in `pyproject.toml`. Hardware support claims should reflect the adapters actually supplied and tested.

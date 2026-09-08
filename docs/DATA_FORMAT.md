@@ -1,5 +1,7 @@
 # Data layout used by this application
 
+For the layout's appearance in the application, see the illustrated manual's [Attributes view](USER_MANUAL.md#data-manager-attributes) and [Datasets view](USER_MANUAL.md#data-manager-datasets).
+
 This describes `catx/repositories/project.py`, not the complete dotTHz specification or a guarantee that arbitrary dotTHz files are supported. Validate changes with the intended downstream dotTHz software.
 
 Projects have a `.thz` extension and are HDF5 files. New files receive root attributes `format="dotTHz"` and `created_utc`. `project_metadata` is JSON containing saved fields such as user, spectrometer, sample, description, and mode. `numbering_widths` is internal JSON bookkeeping.
