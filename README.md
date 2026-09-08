@@ -7,20 +7,20 @@ Data Acquisition is part of the dotTHz project: a Python/PyQt6 desktop tool for 
 ## Documentation
 
 - [Installation](Installation_guide.txt): source setup and portable Windows releases.
-- [Illustrated user manual](docs/USER_MANUAL.md): window tour, worked acquisition example, profiles, calibration, and data management.
+- [User manual](docs/USER_MANUAL.md): window tour, worked acquisition example, profiles, calibration, and data management.
 - [Customisation guide](docs/CUSTOMISATION.md): modification direction, code map, backend requirements, and an AI handoff template.
-- [Stored data layout](docs/DATA_FORMAT.md): current HDF5 layout and plotting assumptions.
-- [AI contributor instructions](AGENTS.md): repository guidance for coding assistants.
+- [Data layout](docs/DATA_FORMAT.md): current HDF5 layout and plotting assumptions.
+- [AI instructions](AGENTS.md): repository guidance for coding assistants.
 
 ## Features
 
 [![Data Manager displaying sample, reference, and baseline waveforms](Images/data_manager_window02.png)](docs/USER_MANUAL.md#data-manager-datasets)
 
-*Inspect saved measurements in Data Manager. Start with the [visual window guide](docs/USER_MANUAL.md#visual-guide-to-the-windows), or follow the [worked acquisition example](docs/USER_MANUAL.md#worked-acquisition-example).*
+*Inspect saved measurements in Data Manager. Start with the [user guide](docs/USER_MANUAL.md#visual-guide-to-the-windows), or follow the [acquisition example](docs/USER_MANUAL.md#worked-acquisition-example).*
 
 - Menlo ScanControl connection and acquisition
 - Baseline, reference, and sample waveform capture
-- dotTHz project storage with per-measurement HDF5 groups
+- dotTHz project storage with measured HDF5 datasets
 - Editable measurement metadata and profile management
 - HDF5 tree browsing, attribute editing, and measurement removal
 - Waveform and frequency-domain dataset plotting
