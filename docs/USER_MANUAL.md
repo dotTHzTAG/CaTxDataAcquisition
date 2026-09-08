@@ -6,13 +6,13 @@ Data Acquisition collects THz time-domain waveforms into `.thz` HDF5 projects. T
 
 Data Manager works on compatible existing projects without ScanControl or connected hardware. Follow [the installation guide](../Installation_guide.txt) to install or extract the application.
 
-## Visual guide to the windows
+## Data Acquisition Panels
 
-Use **Data Acquisition** to prepare a project and collect waveforms, **Profile Manager** to select the recorded user and instrument, and **Data Manager** to inspect saved measurements. The screenshots show example records and settings, not required instrument settings or evidence of measurement quality. Click an image to view it at full size.
+Use **Data Acquisition ** to prepare a project and collect waveforms, **Profile Manager** to select and edit the user and instrument, and **Data Manager** to inspect saved measurements. The screenshots show example records and settings, not required instrument settings or evidence of measurement quality. Click an image to view it at full size.
 
 - [Main window](#main-window)
 - [Profile Manager](#profile-manager)
-- [Worked acquisition example](#worked-acquisition-example)
+- [Acquisition example](#worked-acquisition-example)
 - [Data Manager: attributes](#data-manager-attributes)
 - [Data Manager: datasets](#data-manager-datasets)
 
@@ -24,7 +24,7 @@ Use **Data Acquisition** to prepare a project and collect waveforms, **Profile M
 
 | Area, from top to bottom | What you do here |
 | --- | --- |
-| **Project**, **User**, **Spectrometer** | Check the project and selected profiles. **Scan Count** counts saved measurement groups. **User Manager** opens Profile Manager. |
+| **Project**, **User**, **Spectrometer** | Create/Save a project and select a user and instrument profile. **Scan Count** counts the total number of measurements in the project file. **User Manager** opens Profile Manager. |
 | **ScanControl Connect** and status field | Connect and check status. After connection, the button reads **Refresh Status**. |
 | **Reference Acquisition** | Set calibration **Scan Average**, then acquire or remove the baseline/reference held in session memory. |
 | **Measurement Details** | Enter sample name, description, mode, and numeric metadata. **Reset** here clears the metadata table. |
@@ -32,7 +32,7 @@ Use **Data Acquisition** to prepare a project and collect waveforms, **Profile M
 | Bottom buttons | Start **Single Scan** or **Multi Scan**, **Pause**/**Resume**, or **Stop**. Open **Data Manager** to inspect the file. **Reset Data** deletes project measurements after confirmation. |
 | Bottom status bar | Read the latest application message; use **Show Logs** for more detail. |
 
-For a first measurement: create a project, apply profiles, connect to ScanControl, prepare calibration if needed, enter sample details, and click **Single Scan**. Then open **Data Manager**, select the saved measurement, and choose **Datasets**. The following sections explain each step.
+For a first measurement: create a project, apply profiles, connect to ScanControl, prepare reference and baseline measurements if needed, enter sample details, and click **Single Scan** or **Multi Scan**. Then open **Data Manager**, select the saved measurement, and choose **Datasets**. The following sections explain each step.
 
 ## Projects and profiles
 
@@ -56,7 +56,7 @@ To create a record, choose its tab, click **New**, fill the fields, and click **
 
 ## Connect Menlo ScanControl
 
-Start ScanControl and enable its remote interface at `localhost:8002`, the default. Click **ScanControl Connect**; after connection this becomes **Refresh Status**. Leave ScanControl **Idle** before acquisition. Configure the instrument itself in ScanControl.
+Start ScanControl and enable its remote interface, the default. Click **ScanControl Connect**; after connection this becomes **Refresh Status**. Leave ScanControl **Idle** before acquisition. Configure the instrument itself in ScanControl.
 
 There is no GUI host/port editor. Source customisation can configure `MenloScanControlClient(host=..., port=...)` in application construction. See the customisation guide for other systems.
 
